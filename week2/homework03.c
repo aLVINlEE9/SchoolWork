@@ -59,5 +59,8 @@ int main(int argc, char **argv)
 		}
 		else
 			write(2, "ERROR\n", 6);
+		return 0;
 	}
+	write(2, "execption : only 2 arguments needed", 35);
+	return 0;
 }
