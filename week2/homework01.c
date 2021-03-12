@@ -60,9 +60,17 @@ int main(int argc, char **argv)
 	{
 		num1 = atoi(argv[1]);
 		num2 = atoi(argv[2]);
+		if(num1 <= 0 || num2 <= 0)
+		{
+			write(2, "execption occured : arguments are not valid", 43);
+			return 0;
+		}
 		print(num1, num2, 2);
 		print(num1, num2, 10);
 		print(num1, num2, 8);
 		print(num1, num2, 16);
+		return 0;
 	}
+	write(2, "execption : only 2 arguments needed", 35);
+	return 0;
 }
