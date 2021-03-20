@@ -9,10 +9,7 @@ int main()
 	int sum = 0;
 	float avg = 0;
 	while(i++ < 25)
-	{
 		g_ret[i] = rand() % 100 + 1;
-		printf("%d  ", g_ret[i]);
-	}
 	i = 0;
 	while(i++ < 25)
 		sum += g_ret[i];
@@ -21,12 +18,10 @@ int main()
 	int rec = 0;
 	float close = abs(avg - g_ret[0]);
 	while(i++ < 25)
-	{
 		if(abs(avg - g_ret[i]) < close)
 		{
 			close = abs(avg - g_ret[i]);
 			rec = i;
 		}
-	}
 	printf("\n%d %f %d", sum, avg, g_ret[rec]);
 }
