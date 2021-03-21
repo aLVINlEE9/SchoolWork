@@ -23,5 +23,5 @@ int main()
 			close = abs(avg - g_ret[i]);
 			rec = i;
 		}
-	printf("\n%d %f %d", sum, avg, g_ret[rec]);
+	printf("%d %f %d\n", sum, avg, g_ret[rec]);
 }

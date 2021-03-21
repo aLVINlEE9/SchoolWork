@@ -24,29 +24,28 @@ int main(int argc, char **argv)
 {
 	if(argc == 2)
 	{
-		int i = 0;
-		int j = 0;
+		int j = 0, i = 0;
 		int n = atoi(argv[1]);
 		if(!(n % 2))
 			printf("Input is an even number. Assume the input was %d.\n", n += 1);
 		n /= 2;
-		for(int i = 0; i < n; i++)
+		for(i = 0; i < n; i++)
 		{
-			for(int j = i; j < n; j++)
+			for(j = i; j < n; j++)
 				printf(" ");
-			for(int j = 0; j < i + 1; j++)
+			for(j = 0; j < i + 1; j++)
 				printf("*");
-			for(int j = 0; j < i; j++)
+			for(j = 0; j < i; j++)
 				printf("*");
 			printf("\n");
 		}
-		for(int i = 0; i < n + 1; i++)
+		for(i = 0; i < n + 1; i++)
 		{
-			for(int j = 0; j < i; j++)
+			for(j = 0; j < i; j++)
 				printf(" ");
-			for(int j = i; j < n + 1; j++)
+			for(j = i; j < n + 1; j++)
 				printf("*");
-			for(int j = i; j < n; j++)
+			for(j = i; j < n; j++)
 				printf("*");
 			printf("\n");
 		}

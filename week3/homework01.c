@@ -51,11 +51,11 @@ int main(int argc, char **argv)
 	}
 	else if(*argv[1] == 'c')
 	{
-		if(argc = 3)
+		if(argc == 3)
 		{
 			int n1 = atoi(argv[2]);
 			float ret = n1 * n1 * pie;
-			printf("The area of the circle is %g square meters.", ret);
+			printf("The area of the circle is %g square meters.\n", ret);
 			return 0;
 		}
 		write(2, "error\n", 6);
@@ -66,10 +66,13 @@ int main(int argc, char **argv)
 		{
 			int n1 = atoi(argv[2]);
 			int n2 = atoi(argv[3]);
-			float ret = n1 * n2 / 2;
-			printf("The area of the triangle is %g square meters.", ret);
+			float ret = (float)n1 * n2 / 2;
+			printf("The area of the triangle is %g square meters.\n", ret);
 			return 0;
 		}
 		write(2, "error\n", 6);
 	}
+	else
+		write(2, "error : not valid letter\n", 25);
+	return (0);
 }
