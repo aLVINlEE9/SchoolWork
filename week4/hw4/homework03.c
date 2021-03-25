@@ -1,30 +1,32 @@
 #include<stdio.h>
+
 # define N 5
 
 int a[N];
 
 int main()
 {
-	int *p;
-	int *r;
+	int *p = a;
 	int i = -1;
 	int sum = 0;
 	while(i++ < N - 1)
 	{
 		printf("input : ");
 		scanf("%d", &a[i]);
-		sum += a[i];
+		sum += p[i];
 	}
 	printf("result : %d\n", sum);
-	i = 0;
-	r = p = a;
-	r++;
-	while(*r++)
+	//printf("%d %d\n", *(p), *(a));
+	i = -1;
+	int *q = p;
+	while(i++ < N - 1)
 	{
-		*a *= 3;
-		printf("%d\n", *a);
+		*p = *(a + i) = *p * 3;
+		p++;
 	}
-	while(i++ < N)
+	p = q;
+	i = -1;
+	while(i++ < N - 1)
 		printf("%d ", p[i]);
 	printf("\n");
 	return 0;
