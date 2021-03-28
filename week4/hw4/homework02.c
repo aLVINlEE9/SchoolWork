@@ -41,7 +41,7 @@ void sort_num(int *i, int *j, int *k)
 	return ;
 }
 
-//#include<stdio.h>
+#include<stdio.h>
 #include<unistd.h>
 
 int main(int argc, char **argv)
@@ -52,11 +52,12 @@ int main(int argc, char **argv)
 		i = atoi(argv[1]);
 		j = atoi(argv[2]);
 		k = atoi(argv[3]);
+		printf("before : %d %d %d\n\n", i, j, k);
 		sort_num(&i, &j, &k);
 		write(1, "all integer inputs were swapped in order\n", 41);
-		//printf("%d %d %d\n", i, j, k);
+		printf("after : %d %d %d\n", i, j, k);
 		return 0;
 	}
-	write(1, "error\n", 6);
+	write(2, "error\n", 6);
 	return 0;
 }
