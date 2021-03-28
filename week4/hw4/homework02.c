@@ -20,10 +20,11 @@ int atoi(char *str)
 
 void sort_num(int *i, int *j, int *k)
 {
+	int n, m;
 	int arr[3] = {*i, *j, *k};
-	for(int n = 0; n < 3; n++)
+	for(n = 0; n < 3; n++)
 	{
-		for(int m = 0; m < 3 - n - 1; m++)
+		for(m = 0; m < 3 - n - 1; m++)
 		{
 			if(arr[m] > arr[m + 1])
 			{
@@ -40,6 +41,7 @@ void sort_num(int *i, int *j, int *k)
 	return ;
 }
 
+//#include<stdio.h>
 #include<unistd.h>
 
 int main(int argc, char **argv)
@@ -52,6 +54,7 @@ int main(int argc, char **argv)
 		k = atoi(argv[3]);
 		sort_num(&i, &j, &k);
 		write(1, "all integer inputs were swapped in order\n", 41);
+		//printf("%d %d %d\n", i, j, k);
 		return 0;
 	}
 	write(1, "error\n", 6);
