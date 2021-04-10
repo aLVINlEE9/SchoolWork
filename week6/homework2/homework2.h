@@ -1,4 +1,4 @@
-#ifdef HOMEWORK2_H
+#ifndef HOMEWORK2_H
 #define HOMEWORK2_H
 
 #include<stdio.h>
@@ -13,6 +13,6 @@ typedef struct student_info_st{
 } INFO_ST;
 
 void save(INFO_ST*);
-void search(INFO_ST*);
+void print_info(INFO_ST*);
 
 #endif
